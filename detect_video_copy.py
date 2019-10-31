@@ -1,17 +1,18 @@
 # USAGE
 # python detect_video.py --model mobilenet_ssd_v2/mobilenet_ssd_v2_coco_quant_postprocess_edgetpu.tflite --labels mobilenet_ssd_v2/coco_labels.txt
+# FIX ABOVE
 
 # import the necessary packages
 from imutils.video import FPS
 from imutils.video import VideoStream
+from edgetpu.basic.basic_engine import BasicEngine
+from edgetpu.utils import dataset_utils, image_processing
 import argparse
 import imutils
 import time
 import cv2
 import platform
 import subprocess
-from edgetpu.basic.basic_engine import BasicEngine
-from edgetpu.utils import dataset_utils, image_processing
 from PIL import Image
 from PIL import ImageDraw
 import numpy as np
